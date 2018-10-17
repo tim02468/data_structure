@@ -2,9 +2,9 @@
 NTUST Data structure homework1
 
 ## Prerequisites
-* OS: windows
-* IDE: Code::Blocks 17.12
-* Compiler: gcc
+* OS: macOS
+* IDE: Xcode version 8.0
+* Compiler: Clang
 
 ## Example
 * Prompt the user to input a string patt of no more than 10 characters in length and a binary parameter reused.

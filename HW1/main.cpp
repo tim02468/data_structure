@@ -13,11 +13,11 @@ void createMatrix(char a[][COL], int ROW, int COL){
     string tmp;
 
     for(int row=0;row<ROW;row++){
-        cout << "Input 5 number in row: " << row+1 << "\n";
+        cout << "Input 10 characters in row: " << row+1 << "\n";
         while(true){
             cin >> tmp;
             if(tmp.length() != ROW){
-                cout << "You should only input 5 char each time!\n";
+                cout << "You should only input 10 characters each time!\n";
             }
             else{
                 for(int col=0;col<COL;col++){

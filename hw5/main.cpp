@@ -21,19 +21,19 @@ public:
     void inorderTraversal(treeNode *current){
         if(current){
             inorderTraversal(current -> leftChild);
-            current -> leftSize = leftSize(current);
+            current -> leftSize = Size(current) + 1;
 //            cout << "treeNode key: " << current -> key << " leftSize: " << current -> leftSize << endl;
             inorderTraversal(current -> rightChild);
         }
 
     };
 
-    int leftSize(treeNode *current){
+    int Size(treeNode *current){
         if(current == nullptr){
             return 0;
         }
 
-        return 1 + leftSize(current -> leftChild);
+        return 1 + Size(current -> leftChild) + Size(current -> rightChild);
     };
 
     void insertNode(const int key){
@@ -41,7 +41,6 @@ public:
         treeNode *currentNodeParent = 0;
         treeNode *newNode = new treeNode;
         newNode -> key = key;
-        newNode -> leftSize = 1;
 
         while(currentNode != nullptr){
             currentNodeParent = currentNode;
